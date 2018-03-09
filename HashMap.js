@@ -1,7 +1,7 @@
 // write a simple hash table for quick lookups and insertions.
 
 //hash table constructor
-const HashTable = (size) => {
+function HashTable(size){
 	this.table = {};
 	this.numberOfValues = 0;
 	this.size = size;
@@ -11,7 +11,7 @@ const HashTable = (size) => {
 let myHash = new HashTable(30);
 
 //generates a hash code
-HashTable.prototype.generateHash = (key) => {
+HashTable.prototype.generateHash = function(key){
 	let total = 0;
 	for(let i = 0; i < key.length; i++){
 		total += key.charCodeAt(i);
@@ -22,7 +22,7 @@ HashTable.prototype.generateHash = (key) => {
 
 //create insertion function and make sure to check collision 
 
-HashTable.prototype.add = (key,value) => {
+HashTable.prototype.add = function(key,value){
 	let index = this.generateHash(key);
 	if(!this.table.hasOwnProperty(index)){
 		this.table[index] = {}
@@ -34,7 +34,7 @@ HashTable.prototype.add = (key,value) => {
 }
 
 //create search function
-HashTable.prototype.search = (key) => {
+HashTable.prototype.search = function(key){
 	let index = this.generateHash(key);
 	if(this.table.hasOwnProperty(index) && this.table[hash].hasOwnProperty(key){
 		return this.table[index][key];
