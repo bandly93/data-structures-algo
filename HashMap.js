@@ -36,8 +36,8 @@ HashTable.prototype.add = (key,value) => {
 //create search function
 HashTable.prototype.search = (key) => {
 	let index = this.generateHash(key);
-	if(this.values.hasOwnProperty(index) && this.value[hash].hasOwnProperty(key){
-		return this.value[index][key];
+	if(this.table.hasOwnProperty(index) && this.table[hash].hasOwnProperty(key){
+		return this.table[index][key];
 	} else { 
 		return null;
 	}
