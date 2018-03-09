@@ -7,9 +7,6 @@ function HashTable(size){
 	this.size = size;
 }
 
-//create an instance of the hashclass with a array size of 30;
-let myHash = new HashTable(30);
-
 //generates a hash code
 HashTable.prototype.generateHash = function(key){
 	let total = 0;
@@ -21,7 +18,6 @@ HashTable.prototype.generateHash = function(key){
 }
 
 //create insertion function and make sure to check collision 
-
 HashTable.prototype.add = function(key,value){
 	let index = this.generateHash(key);
 	if(!this.table.hasOwnProperty(index)){
@@ -36,11 +32,17 @@ HashTable.prototype.add = function(key,value){
 //create search function
 HashTable.prototype.search = function(key){
 	let index = this.generateHash(key);
-	if(this.table.hasOwnProperty(index) && this.table[hash].hasOwnProperty(key){
+	if(this.table.hasOwnProperty(index) && this.table[index].hasOwnProperty(key)){
 		return this.table[index][key];
-	} else { 
-		return null;
+	return null;
 	}
 }
-
-
+//remove function
+HashTable.prototype.remove = function(key){
+	let index = this.generateHash(key);
+	if(this.search(key){
+		delete this.table[index][key]
+		this.numberOfValues--;
+	return null;
+	}
+}
