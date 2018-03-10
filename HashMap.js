@@ -13,8 +13,7 @@ HashTable.prototype.generateHash = function(key){
 	for(let i = 0; i < key.length; i++){
 		total += key.charCodeAt(i);
 	}
-	let hash = total % this.size;
-	return hash;
+	return total % this.size;
 }
 
 //create insertion function and make sure to check collision 
@@ -37,12 +36,12 @@ HashTable.prototype.search = function(key){
 	return null;
 	}
 }
+
 //remove function
 HashTable.prototype.remove = function(key){
 	let index = this.generateHash(key);
 	if(this.search(key){
 		delete this.table[index][key]
 		this.numberOfValues--;
-	return null;
 	}
 }
