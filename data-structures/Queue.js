@@ -7,7 +7,7 @@ Queue.prototype.enqueue = function(data){
 }
 
 Queue.prototype.dequeue = function(){
-	return this.array.splice(1,Queue.length-1);
+	return this.array.shift();
 }
 
 Queue.prototype.peek = function(){
