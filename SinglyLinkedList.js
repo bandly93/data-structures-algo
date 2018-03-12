@@ -24,23 +24,19 @@ SinglyLinkedList.prototype.add = function(data){
 }
 
 SinglyLinkedList.prototype.remove = function(data){
-	let previous = this.head;
+	let previous;
 	let current = this.head;
-	while(current){
-		if(current.data === data) {
-			if(current === this.head){
-				this.head = this.head.next;
-			}
-			if(current === this.tail){
-				this.tail = previous;
-			}
-			previous.next = current.next;
-			this.length--;
-		}else{
+
+	if(current.data === data) {
+		this.head = current.next;
+	}else{
+		while(current.data !== data){
 			previous = current;
+			current = current.next;	
 		}
-		current = current.next
+		previous.next = current.next;
 	}
+	this.length--;
 }
 
 SinglyLinkedList.prototype.search = function(data){
