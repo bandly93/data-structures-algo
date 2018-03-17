@@ -43,6 +43,12 @@ function Swap(array,firstIndex,secondIndex){
 	array[secondIndex] = firstItem;	
 }
 
+module.exports = {
+	QuickSort,
+	Partition,
+	Swap,
+}
+
 
 /*
 	*****TESTING*******

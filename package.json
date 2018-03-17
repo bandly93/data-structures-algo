@@ -1,0 +1,26 @@
+{
+  "name": "dsa",
+  "version": "1.0.0",
+  "description": "For testing purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bandly93/data-structures-algo.git"
+  },
+  "keywords": [
+    "testing",
+    "jest"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bandly93/data-structures-algo/issues"
+  },
+  "homepage": "https://github.com/bandly93/data-structures-algo#readme",
+  "devDependencies": {
+    "jest": "^22.4.2"
+  }
+}
