@@ -13,8 +13,8 @@ function QuickSort(array,left,right){
 			QuickSort(array,index,right);
 		}
 	}
-	return array;	
-}
+	return array;
+}	
 
 function Partition(array,left,right){
 	let i = left;
@@ -40,9 +40,8 @@ function Swap(array,firstIndex,secondIndex){
 	let firstItem = array[firstIndex];
 	let secondItem = array[secondIndex];
 	array[firstIndex] = secondItem;
-	array[secondIndex] = firstItem;
+	array[secondIndex] = firstItem;	
 }
-
 
 
 /*
